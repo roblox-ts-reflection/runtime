@@ -25,9 +25,6 @@ export const UNKNOWN_TYPE = ConvertTypeDescriptorInClass({
 /** @internal @hidden */
 export function DefineLocalType(id: number, _type: Type) {
 	const finalId = tostring(id);
-	if (ReflectStore.LocalTypes.has(finalId)) {
-		throw "Type already defined";
-	}
 
 	_type = ConvertTypeDescriptorInClass(_type, schedulingLocalTypes.get(finalId));
 	schedulingLocalTypes.delete(finalId);
