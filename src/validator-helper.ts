@@ -11,7 +11,6 @@ function GenerateClassValidator(_type: Type): t.check<unknown> {
 		const mt = getmetatable(v);
 		if (!mt || _type.Value !== mt) return false;
 
-		// TODO check by types
 		return v instanceof (_type.Value as Constructor);
 	}) as t.check<unknown>;
 }

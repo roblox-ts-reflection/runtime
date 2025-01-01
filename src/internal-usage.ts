@@ -123,10 +123,10 @@ function ImportPublicApi() {
 }
 
 /** @internal @hidden */
-export function __GetType(id: unknown, schedulingType = false): Type {
+export function __GetType(id: unknown): Type {
 	const _type = ImportPublicApi().GetType(id);
 
-	if (!ReflectStore.Store.has(id as string) && schedulingType) {
+	if (!ReflectStore.Store.has(id as string)) {
 		const typeReferense = ScheduledTypes.get(id as string) ?? {};
 		ScheduledTypes.set(id as string, typeReferense);
 

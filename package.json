@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/reflection-runtime",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Library that allows you to work with types in runtime!",
   "main": "out/init.lua",
   "scripts": {
